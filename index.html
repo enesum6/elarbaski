@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Deals</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+    /* Arka plan ve genel ayarlar */
+    html, body {
+        background-image: url('images/epoksi-havuz-boyalari.jpeg'); /* Yolun doğruluğunu kontrol et */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        width: 100%; 
+    }
+
+    .nav {
+        justify-content: space-around;
+        align-items: center;
+        display: flex;
+        background-color: rgba(169, 169, 169, 0.8); /* Şeffaf gri daha şık durur */
+        margin: 0px 150px;
+        border-radius: 50px;
+        padding: 10px;
+    }
+
+    /* Slider Ayarları */
+  .slider-wrapper {
+    width: 90%; /* Genişliği biraz daha artırabilirsin */
+    max-width: 800px;
+    /* Sabit 450px yerine vh (ekran yüksekliği oranı) veya 
+       daha küçük bir değer kullanabiliriz */
+    height: auto; 
+    aspect-ratio: 16 / 9; /* Resimlerin 16:9 formatında kalmasını sağlar */
+    margin: 20px auto; 
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+    .slider-container {
+        display: flex;
+        transition: transform 0.8s ease-in-out; /* Kayma hızı */
+        width: 100%;
+        height: 100%;
+    }
+
+    .slide {
+        min-width: 100%;
+        height: 100%;
+    }
+
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .text{
+        margin-left: 160px;
+    }
+    .kaliplar{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 600px;
+        align-items: center;
+    }
+    .kaliplar2{
+        background-color:gold;
+        width: 1250px;
+        height: 250px;
+        margin:120px;
+        display: flex;
+        margin-left: 150px;
+        margin-top: 58px;
+    }
+    img{
+        margin-left: 25px;
+        margin-top: 58px;
+    }
+    .logoveslide{
+        display: flex;
+    }
+    .logo{
+        margin-left: auto;
+    }
+    .yazi{
+        padding-left: 50px;
+        padding-top: 50px;
+    }
+    .resimler{
+        display: flex;
+        margin-left: 150px;
+
+    }
+  
+
+    #a1{
+        text-decoration: none;
+        color: black;
+        
+    }
+    #a2{
+        text-decoration: none;
+        color: black;
+    }
+    #a3{
+        text-decoration: none;
+        color: black;
+    }
+    #a4{
+        text-decoration:none;
+        color: black;
+    }
+</style>
+</head>
+
+<body>
+    <nav class="nav">
+        <a href="main.html" id="a1"><strong>Ana Sayfa</strong></a>
+        <a id="a2" href="baskibeton.html"><strong>Kalıp Modelleri</strong></a>
+        <a id="a3" href="about.html"><strong>Hakkında</strong></a>
+        <a id="a4" href="contact.html"><strong>İletişim</strong></a>
+    </nav>
+    
+  <div class="text">
+    <strong><i>ELAR BASKI BETON</i></strong>
+   </div>
+    <div class="logoveslide">
+        <div class="logo"><img src="images/newlogo.jpg" alt=""></div>
+
+    <div class="slider-wrapper">
+        <!-- Buraya ID ekledik: id="mySlider" -->
+        <div class="slider-container" id="mySlider">
+            <div class="slide">
+                <img src="images/arkaPlan.jpeg" alt="Açıklama 1">
+            </div>
+            <div class="slide">
+                <img src="images/balat1.jpg" alt="Açıklama 2">
+            </div>
+            <div class="slide">
+                <img src="images/epoksi-havuz-boyalari.jpg" alt="Açıklama 3">
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <div class="kaliplar">
+        <div class="kalip1">
+            <a href="baskibeton.html"><img src="images/kalip1.jpg" alt="BASKI BETON KALIPLARI">
+</a>
+        </div>
+    </div>
+
+    <div class="kaliplar2">
+        <div class="img">
+            <img src="images/logokalip.png" alt="KALIPLAR">
+        </div>
+        <div class="yazi">
+            <p>ELar Beton markası, kalıp modelleme süreçlerinde dayanıklı ve hassas beton elemanlar üreterek endüstriyel projelere sağlam çözümler sunar. Kalıp tasarımları sayesinde standart dışı geometrilerin dökümünü mümkün kılan marka, yüksek mukavemetli malzeme kullanımıyla uzun ömürlü ürünler elde edilmesini sağlar. Bu sayede ELar Beton, kalıp modelleme ile seri beton üretiminde hem maliyet hem de zaman avantajı yaratır.</p>
+        </div>
+    </div>
+
+    <div class="resimler">
+        <div class="resim1">
+            <img src="images/resim3.png" alt="">
+        </div>
+        <div class="resim2">
+            <img src="images/resim6.png" alt="">
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (Ayrı etiket) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Senin Slider Kodun (Ayrı etiket) -->
+    <script>
+        // Sayfa yüklenince çalışması için window.onload içine aldık
+        window.onload = function() {
+            const slider = document.getElementById('mySlider');
+            const slides = document.querySelectorAll('.slide');
+            let currentIndex = 0;
+
+            function nextSlide() {
+                currentIndex++;
+                
+                if (currentIndex >= slides.length) {
+                    currentIndex = 0;
+                }
+                
+                const offset = -currentIndex * 100;
+                slider.style.transform = `translateX(${offset}%)`;
+            }
+
+            // 3 saniyede bir değiştir
+            setInterval(nextSlide, 3000);
+        };
+    </script>
+</body>
+</html>
