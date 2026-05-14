@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
 
 <head>
     <meta name="google-site-verification" content="EpZcojcpn1wnkO53DrDtmKBmsRfcrrTi3zgUBwp5L0s" />
@@ -12,10 +12,8 @@
     <link rel="icon" type="image/png" href="favicon.jpg">
 
     <style>
-        /* Arka plan ve genel ayarlar */
-        html,
+        /* Genel Ayarlar */
         body {
-            /* Yolun doğruluğunu kontrol et */
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -23,31 +21,67 @@
             margin: 0;
             padding: 0;
             min-height: 100vh;
-            width: 100%;
+            overflow-x: hidden;
+            /* Yan kaymayı engeller */
         }
 
+        /* Navigasyon */
         .nav {
-            justify-content: space-around;
+            justify-content: center;
+            gap: 20px;
             align-items: center;
             display: flex;
             background-color: rgba(169, 169, 169, 0.8);
-            /* Şeffaf gri daha şık durur */
-            margin: 0px 150px;
+            margin: 10px auto;
             border-radius: 50px;
             padding: 10px;
+            width: 90%;
+            max-width: 800px;
         }
 
-        /* Slider Ayarları */
+        .nav a {
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+        }
+
+        /* Başlık Yazısı */
+        .text {
+            text-align: center;
+            font-size: 24px;
+            margin: 20px 0;
+        }
+
+        /* Logo ve Slider Alanı */
+        .logoveslide {
+            display: flex;
+            flex-direction: column;
+            /* Mobilde alt alta */
+            align-items: center;
+            gap: 20px;
+            padding: 0 15px;
+        }
+
+        @media (min-width: 768px) {
+            .logoveslide {
+                flex-direction: row;
+                /* Masaüstünde yan yana */
+                justify-content: center;
+            }
+        }
+
+        .logo img {
+            max-width: 200px;
+            height: auto;
+            margin: 0;
+        }
+
+        /* Slider */
         .slider-wrapper {
-            width: 90%;
-            /* Genişliği biraz daha artırabilirsin */
-            max-width: 800px;
-            /* Sabit 450px yerine vh (ekran yüksekliği oranı) veya 
-       daha küçük bir değer kullanabiliriz */
+            width: 100%;
+            max-width: 600px;
             height: auto;
             aspect-ratio: 16 / 9;
-            /* Resimlerin 16:9 formatında kalmasını sağlar */
-            margin: 20px auto;
             overflow: hidden;
             border-radius: 15px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
@@ -56,7 +90,6 @@
         .slider-container {
             display: flex;
             transition: transform 0.8s ease-in-out;
-            /* Kayma hızı */
             width: 100%;
             height: 100%;
         }
@@ -69,109 +102,111 @@
         .slide img {
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            object-fit: cover;
+            margin: 0;
         }
 
-        .text {
-            margin-left: 160px;
-        }
-
+        /* Orta Bölüm (Kalıplar) */
         .kaliplar {
             display: flex;
-            justify-content: space-between;
-            margin-left: 600px;
-            align-items: center;
+            justify-content: center;
+            margin: 30px 0;
         }
 
+        .kaliplar img {
+            max-width: 100%;
+            height: auto;
+            margin: 0;
+        }
+
+        /* Alt Bilgi Kartı */
         .kaliplar2 {
             background-color: gold;
-            width: 1250px;
-            height: 250px;
-            margin: 120px;
+            width: 90%;
+            max-width: 1100px;
+            margin: 30px auto;
             display: flex;
-            margin-left: 150px;
-            margin-top: 58px;
+            flex-direction: column;
+            padding: 20px;
+            border-radius: 15px;
+            align-items: center;
+            text-align: center;
         }
 
-        img {
-            margin-left: 25px;
-            margin-top: 58px;
+        @media (min-width: 768px) {
+            .kaliplar2 {
+                flex-direction: row;
+                text-align: left;
+            }
         }
 
-        .logoveslide {
-            display: flex;
+        .kaliplar2 .img img {
+            max-width: 150px;
+            margin: 0 0 20px 0;
         }
 
-        .logo {
-            margin-left: auto;
+        @media (min-width: 768px) {
+            .kaliplar2 .img img {
+                margin: 0 20px 0 0;
+            }
         }
 
         .yazi {
-            padding-left: 50px;
-            padding-top: 50px;
+            padding: 0;
         }
 
+        /* Alt Resimler */
         .resimler {
             display: flex;
-            margin-left: 150px;
-
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 50px;
+            padding: 0 15px;
         }
 
-
-        #a1 {
-            text-decoration: none;
-            color: black;
-
-        }
-
-        #a2 {
-            text-decoration: none;
-            color: black;
-        }
-
-        #a3 {
-            text-decoration: none;
-            color: black;
-        }
-
-        #a4 {
-            text-decoration: none;
-            color: black;
+        .resimler img {
+            max-width: 100%;
+            height: auto;
+            margin: 0;
+            border-radius: 10px;
         }
     </style>
 </head>
 
 <body>
     <nav class="nav">
-        <a href="main.html" id="a1"><strong>Ana Sayfa</strong></a>
-        <a id="a2" href="baskibeton.html"><strong>Kalıp Modelleri</strong></a>
-        <a id="a3" href="about.html"><strong>Hakkında</strong></a>
-        <a id="a4" href="contact.html"><strong>İletişim</strong></a>
+        <a href="index.html"><strong>Ana Sayfa</strong></a>
+        <a href="baskibeton.html"><strong>Kalıp Modelleri</strong></a>
+        <a href="about.html"><strong>Hakkında</strong></a>
+        <a href="contact.html"><strong>İletişim</strong></a>
     </nav>
 
     <div class="text">
         <strong><i>ELAR BASKI BETON</i></strong>
     </div>
+
     <div class="logoveslide">
-        <div class="logo"><img src="newlogo.jpg" alt=""></div>
+        <div class="logo">
+            <img src="newlogo.jpg" alt="Elar Logo">
+        </div>
 
         <div class="slider-wrapper">
-            <!-- Buraya ID ekledik: id="mySlider" -->
             <div class="slider-container" id="mySlider">
                 <div class="slide">
-                    <img src="arkaPlan.jpeg" alt="Açıklama 1">
+                    <img src="arkaPlan.jpeg" alt="Elar Uygulama 1">
                 </div>
                 <div class="slide">
-                    <img src="balat1.jpg" alt="Açıklama 2">
+                    <img src="balat1.jpg" alt="Elar Uygulama 2">
                 </div>
             </div>
         </div>
-
     </div>
 
     <div class="kaliplar">
         <div class="kalip1">
-            <a href="baskibeton.html"><img src="kalip1.jpg" alt="BASKI BETON KALIPLARI">
+            <a href="baskibeton.html">
+                <img src="kalip1.jpg" alt="BASKI BETON KALIPLARI">
             </a>
         </div>
     </div>
@@ -183,45 +218,39 @@
         <div class="yazi">
             <p>ELar Beton markası, kalıp modelleme süreçlerinde dayanıklı ve hassas beton elemanlar üreterek endüstriyel
                 projelere sağlam çözümler sunar. Kalıp tasarımları sayesinde standart dışı geometrilerin dökümünü mümkün
-                kılan marka, yüksek mukavemetli malzeme kullanımıyla uzun ömürlü ürünler elde edilmesini sağlar. Bu
-                sayede ELar Beton, kalıp modelleme ile seri beton üretiminde hem maliyet hem de zaman avantajı yaratır.
+                kılan marka, yüksek mukavemetli malzeme kullanımıyla uzun ömürlü ürünler elde edilmesini sağlar.
             </p>
         </div>
     </div>
 
     <div class="resimler">
         <div class="resim1">
-            <img src="resim3.png" alt="">
+            <img src="resim3.png" alt="Referans 1">
         </div>
         <div class="resim2">
-            <img src="resim6.png" alt="">
+            <img src="resim6.png" alt="Referans 2">
         </div>
     </div>
 
-    <!-- Bootstrap JS (Ayrı etiket) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Senin Slider Kodun (Ayrı etiket) -->
     <script>
-        // Sayfa yüklenince çalışması için window.onload içine aldık
         window.onload = function () {
             const slider = document.getElementById('mySlider');
             const slides = document.querySelectorAll('.slide');
             let currentIndex = 0;
 
-            function nextSlide() {
-                currentIndex++;
-
-                if (currentIndex >= slides.length) {
-                    currentIndex = 0;
+            if (slider && slides.length > 0) {
+                function nextSlide() {
+                    currentIndex++;
+                    if (currentIndex >= slides.length) {
+                        currentIndex = 0;
+                    }
+                    const offset = -currentIndex * 100;
+                    slider.style.transform = `translateX(${offset}%)`;
                 }
-
-                const offset = -currentIndex * 100;
-                slider.style.transform = `translateX(${offset}%)`;
+                setInterval(nextSlide, 3000);
             }
-
-            // 3 saniyede bir değiştir
-            setInterval(nextSlide, 3000);
         };
     </script>
 </body>
