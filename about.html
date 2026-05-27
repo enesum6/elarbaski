@@ -1,14 +1,14 @@
 <!DOCTYPE html>
+<html lang="tr">
 
 <head>
     <link rel="icon" type="image/png" href="favicon.png">
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Elar Baskı Beton Kalıpları</title>
+    <title>Hakkımızda | Elar Baskı Beton Kalıpları</title>
     <meta name="description" content="Elar Baskı Beton Kalıpları ve profesyonel logo hizmetleri.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
 
     <style>
         /* Genel Ayarlar */
@@ -44,177 +44,82 @@
             font-size: 14px;
         }
 
-        /* Başlık Yazısı */
-        .text {
-            text-align: center;
-            font-size: 24px;
-            margin: 20px 0;
-        }
-
-        /* Logo ve Slider Alanı */
-        .logoveslide {
+        /* Metin Alanları Ana Kapsayıcı */
+        .main {
             display: flex;
             flex-direction: column;
-            /* Mobilde alt alta */
-            align-items: center;
-            gap: 20px;
+            gap: 25px;
             padding: 0 15px;
+            margin-top: 40px;
         }
 
-        @media (min-width: 768px) {
-            .logoveslide {
-                flex-direction: row;
-                /* Masaüstünde yan yana */
-                justify-content: center;
-            }
-        }
-
-        .logo img {
-            max-width: 200px;
-            height: auto;
-            margin: 0;
-        }
-
-        /* Slider */
-        .slider-wrapper {
+        /* Hakkımızda Yazı Blokları */
+        .about,
+        .about2 {
+            margin: 0 auto;
             width: 100%;
-            max-width: 600px;
-            height: auto;
-            aspect-ratio: 16 / 9;
-            overflow: hidden;
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            max-width: 800px;
+            /* Okunabilirlik için ideal metin genişliği */
+            text-align: justify;
         }
 
-        .slider-container {
-            display: flex;
-            transition: transform 0.8s ease-in-out;
-            width: 100%;
-            height: 100%;
+        .about h6,
+        .about2 h6 {
+            font-size: 16px;
+            line-height: 1.6;
+            font-weight: normal;
+            color: #2b2b2b;
         }
 
-        .slide {
-            min-width: 100%;
-            height: 100%;
-        }
-
-        .slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            margin: 0;
-        }
-
-        /* Orta Bölüm (Kalıplar) */
-        .kaliplar {
-            display: flex;
-            justify-content: center;
-            margin: 30px 0;
-        }
-
-        .kaliplar img {
-            max-width: 100%;
-            height: auto;
-            margin: 0;
-        }
-
-        /* Alt Bilgi Kartı */
-        .kaliplar2 {
-            background-color: gold;
-            width: 90%;
-            max-width: 1100px;
-            margin: 30px auto;
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-            border-radius: 15px;
-            align-items: center;
-            text-align: center;
-        }
-
+        /* Masaüstü için ekstra yan boşluklar */
         @media (min-width: 768px) {
-            .kaliplar2 {
-                flex-direction: row;
-                text-align: left;
+            .main {
+                margin-top: 60px;
+            }
+
+            .about,
+            .about2 {
+                max-width: 900px;
             }
         }
 
-        .kaliplar2 .img img {
-            max-width: 150px;
-            margin: 0 0 20px 0;
-        }
-
-        @media (min-width: 768px) {
-            .kaliplar2 .img img {
-                margin: 0 20px 0 0;
-            }
-        }
-
-        .footer .firstimage img {
-            max-width: 150px;
-            margin: 0 0 20px 0;
-        }
-
-        @media (min-width: 768px) {
-            .footer .firstimage img {
-                margin: 0 20px 0 0;
-            }
-        }
-
-        .keyword {
-            background-color: darksalmon;
-            width: 90%;
-            max-width: 1100px;
-            margin: 30px auto;
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-            border-radius: 15px;
-            align-items: center;
-            text-align: center;
+        /* Footer Ayarları */
+        .footer {
+            margin-top: 80px;
+            padding: 0 15px;
         }
 
         .firstimage {
-            margin-left: 675px;
-        }
-
-        .yazi {
-            padding: 0;
-        }
-
-        /* Alt Resimler */
-        .resimler {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
-            margin-bottom: 50px;
-            padding: 0 15px;
+            /* Logoyu her ekranda ortalar */
+            margin: 20px 0;
         }
 
-        .resimler img {
-            max-width: 100%;
+        .firstimage img {
+            max-width: 150px;
             height: auto;
+        }
+
+        /* Anahtar Kelimeler Kutusu */
+        .keyword {
+            background-color: darksalmon;
+            width: 100%;
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .keyword p {
             margin: 0;
-            border-radius: 10px;
-        }
-        .footer{
-            margin-top: 100px;
-        }
-        .about{
-            margin: 150px;
-            margin-top: 25px;
-        }
-        .about2{
-            margin-top: 25px;
-            margin-left: 150px;
-            margin-right: 150px;
-            margin-bottom: 20px;
+            font-size: 13px;
+            line-height: 1.8;
+            color: #333;
         }
     </style>
-
-
-
 </head>
 
 <body>
@@ -226,70 +131,27 @@
     </nav>
 
     <div class="main">
-         <div class="about">
-            <h6>ELar Baskı Beton; yenilikçi kalıp modelleme teknikleri ve yüksek mukavemetli malzeme mühendisliğini bir araya getirerek, endüstriyel tesislerden lüks konut projelerine kadar geniş bir yelpazede kusursuz zemin çözümleri sunar. Aşınmaya, zorlu hava şartlarına ve ağır yüklere karşı maksimum direnç gösteren dekoratif tasarımlarımız, standart dışı geometrik döküm yeteneğimiz sayesinde projelerinize tam uyum sağlar. Estetik zarafeti zamana meydan okuyan dayanıklılıkla buluşturan markamız, modern mimarinin ihtiyaç duyduğu uzun ömürlü ve prestijli alanları güvenle inşa eder.</h6>
+        <div class="about">
+            <h6>ELar Baskı Beton; yenilikçi kalıp modelleme teknikleri ve yüksek mukavemetli malzeme mühendisliğini bir
+                araya getirerek, endüstriyel tesislerden lüks konut projelerine kadar geniş bir yelpazede kusursuz zemin
+                çözümleri sunar. Aşınmaya, zorlu hava şartlarına ve ağır yüklere karşı maksimum direnç gösteren
+                dekoratif tasarımlarımız, standart dışı geometrik döküm yeteneğimiz sayesinde projelerinize tam uyum
+                sağlar. Estetik zarafeti zamana meydan okuyan dayanıklılıkla buluşturan markamız, modern mimarinin
+                ihtiyaç duyduğu uzun ömürlü ve prestijli alanları güvenle inşa eder.</h6>
         </div>
         <div class="about2">
-            <h6>Mimari projelerde estetik ve mukavemeti bir arada arayanlar için ELar Baskı Beton, özgün kalıp tasarımları ve zengin doku seçenekleriyle zemin kaplamasında standartları yeniden belirliyor. Gelişmiş üretim teknolojimiz sayesinde en zorlu yüzeylerde bile pürüzsüz ve hassas geometrik uygulamalar gerçekleştirerek, dış mekanlarınıza modern ve seçkin bir imaj kazandırıyoruz. Koruyucu özel cila uygulamalarımızla renk formunu ve ilk günkü parlaklığını yıllarca koruyan zeminlerimiz, işletmenize veya yaşam alanlarınıza değer katan kalıcı yatırımlara dönüşür.</h6>
+            <h6>Mimari projelerde estetik ve mukavemeti bir arada arayanlar için ELar Baskı Beton, özgün kalıp
+                tasarımları ve zengin doku seçenekleriyle zemin kaplamasında standartları yeniden belirliyor. Gelişmiş
+                üretim teknolojimiz sayesinde en zorlu yüzeylerde bile pürüzsüz ve hassas geometrik uygulamalar
+                gerçekleştirerek, dış mekanlarınıza modern ve seçkin bir imaj kazandırıyoruz. Koruyucu özel cila
+                uygulamalarımızla renk formunu ve ilk günkü parlaklığını yıllarca koruyan zeminlerimiz, işletmenize veya
+                yaşam alanlarınıza değer katan kalıcı yatırımlara dönüşür.</h6>
         </div>
     </div>
-
-
-
 
     <div class="footer">
         <div class="firstimage">
             <img src="logokalip.png" alt="KALIPLAR">
         </div>
-        <hr>
-        <div class="keyword">
-            <p>Elar Baskı Beton
-
-                | Elar Beton
-
-                | Elar Baskı Beton Kalıpları
-
-                | Elar zemin kaplama
-
-                | Elar kalıp modelleme
-
-                | elarbaski.vercel.app
-
-                | Elar endüstriyel beton çözümleri | Baskı beton fiyatları
-
-                | Baskı beton modelleri
-
-                | Zemin baskı beton
-
-                | Duvar baskı beton
-
-                | Baskı beton kalıpları
-
-                | Hazır beton kalıbı
-
-                | Dekoratif beton m2 fiyatı
-
-                | Desenli beton kaplama | Bahçe baskı beton uygulaması
-
-                | Otopark zemin kaplama
-
-                | Yürüyüş yolu desenli beton
-
-                | Çevre düzenleme baskı beton
-
-                | Villa bahçesi zemin çözümleri
-
-                | Dayanıklı endüstriyel zemin | Yüksek mukavemetli kalıp beton
-
-                | Renkli baskı beton
-
-                | Beton kalıp tasarımları
-
-                | Baskı beton cilası (sealer)
-
-                | Aşınmaya dayanıklı zemin betonu
-
-                | Antik zemin kaplama modelleri</p>
-        </div>
-    </div>
-</body>
+        <hr class="max-width: 1100px; margin: 0 auto;">
+        <div class
